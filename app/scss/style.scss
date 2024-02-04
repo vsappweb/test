@@ -1,0 +1,137 @@
+@import "reset";
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.wrapper {
+    position: relative;
+    width: 66rem;
+    height: 45rem;
+    padding: 2rem;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: $cover-color;
+    box-shadow: $box-shadow;
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    transform-origin: right;
+}
+
+.cover.cover__left {
+    z-index: -1;
+}
+
+.cover.cover__right.turn {
+    transform: rotateY(180deg);
+}
+
+.book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.book .book__page {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: $pages-color;
+    box-shadow: 0 0 .6rem rgba(0, 0, 0, .1);
+    display: flex;
+    padding: 2rem;
+}
+
+.profile__page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__page img{
+    max-width: 180px;
+    border-radius: 50%;
+    border: .25rem solid $main-color;
+    margin-bottom: 0.8rem;
+}
+
+.profile__page h1{
+    font-size: 2.7rem;
+    line-height: 1;
+    font-weight: 700;
+}
+.profile__page h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $main-color;
+}
+
+.profile__page .social__media {
+    margin: 0.6rem 0 0.8rem;
+}
+.profile__page .social__media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: $border;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: $main-color;
+    margin: 0 .2rem;
+    transition: .5s;
+}
+.profile__page .social__media a:hover{
+    background: $main-color;
+    color: $white-color;
+}
+
+.profile__page p{
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.profile__page .btn__box{
+    margin-top: 1.2rem;
+}
+
+.btn{
+    display: inline-flex;
+    width: 9.5rem;
+    height: 3rem;
+    background: $main-color;
+    border: $border;
+    border-radius: .3rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: $white-color;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: .5s;
+}
+
+.btn:hover{
+    background: transparent;
+    color: $main-color;
+}
+.btn__box .btn:nth-child(2){
+    background: transparent;
+    color: $main-color;
+}
+.btn__box .btn:nth-child(2):hover{
+    background: $main-color;
+    color: $white-color;
+}
+
+@import "media";
